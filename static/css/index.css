@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+  transition: all ease 1.2s;
+  background-position: center;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot?t=1565675338967'); /* IE9 */
+  src: url('../fonts/iconfont.eot?t=1565675338967#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */
+      url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMYAAsAAAAAB0gAAALLAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqBYIFNATYCJAMUCwwABCAFhG0HUBthBsgusG3Yk0C1YYwNdPkSDnAQhnj4/zXafV9mZ2dQT6LJ5XQSySS5R/PQ8BIIieZZtELen/abD5U0S0fHI2lmSTx9eXcc3+8/LJEWopS4SmSrYyFubdFDIc3JafPrBqy3+AJJHRwzXVoUSJ7N5ladHg04GvBsGJU0sn+gd/5h7CaCB3ieQGeGqsiW3eMzSCvAtEAckkKDdMGnKE6yFZqGtUXcV7XpRprjHv/9+GtRpElqBuZuPbhjwvqPkiuxa0PXbKcIfoK+uSJjIVCIE42xQ2LCocZ0g+M2AJ1Wkpbqt9JqVxYLMgFwhA7GKdIy/7xoGIXDwAY9XvgxEvMy+UqdTeLHajaZH1cE33JWBR0GsAjYBOBmkiVIilzEw/THLpo4yJa+Hzhwm2u6o4mnr2++VK69uvVmb+J6Rh4Xv/ec5A/Lbz6bKB5b+vL1/3+Hs8HzAGaGJusn67BufmKttFM5L6+Vzys7RyUmK5XPgdeH7k0p3R95O3V/sAQj4KO8I/oV8oYYSO9SkN6n//rfuNvnP6U1/9N9AV/O+Yc8p8j4dXKD+f+YP7CpxEKgryUsxbzQUU1aQJairg5/1jXGxzKq8XdtCW2B70AyYDpkrZnIgl0IVW8JNFrrobPA3ubeWEpMlEHMd6dBGOUJkhHeQjbKG7Jg36Ga4AsaoyIGnW0xds/e7JDZzQo1QpPpYyYNz+XISFlRfIKib2sqL+S0C1ShDLJWvVlO7qGLaokF4UC0iTjjynPYrnYZ2rbHfOX10KB6l8jvNBq86Ut1w3MgazMFaQgyMboxRjJ4XJx2JtnKz59AQp9NozrKRpwXkBKSvTMtdc0ByD2ZO6jsUT4JDQhthHAMp3gczK42CtlsHsZvHtWDDKSuOyHi62jAdnyorL69wvmBXKcK8FCNFDlK1GiUPbLVTI2kNpYCUxe0z1nqitw+TSHVlBRdAgAA')
+      format('woff2'),
+    url('../fonts/iconfont.woff?t=1565675338967') format('woff'),
+    url('../fonts/iconfont.ttf?t=1565675338967') format('truetype'),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+      url('../fonts/iconfont.svg?t=1565675338967#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ai10:before {
+  content: '\e67e';
+}
+
+.icon-xiayige:before {
+  content: '\e639';
+}
+
+.icon-zanting:before {
+  content: '\e63b';
+}
+
+.icon-caret-right:before {
+  content: '\e60f';
+}
+
+.right {
+    transform: rotateY(180deg);
+}
+
+#canvas {
+    width: 100vw;
+    height: 100vw;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.audio-info{
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    height: 70vw;
+    display: flex;
+    overflow: hidden;
+    max-width: 375px;
+    max-height: 375px;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    transition: all ease 1.2s;
+    transform: translate(-50%, -50%);
+    color: red;
+}
+.title{
+    margin: 0;
+    font-size: 32px;
+    margin-top: 30%;
+}
+
+.progress{
+    top: 50%;
+    width: 90%;
+    padding: 4px 0;
+    cursor: pointer;
+    margin-top: -5px;
+    position: absolute;
+}
+.progress .bar{
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background: rgba(255, 255, 255, .8);
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
+}
+.progress .point{
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.progress .point.animation {
+    animation: beat ease 1.2s infinite forwards;
+}
+
+.real-time{
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 40px 0 10px 0;
+}
+.options{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.options .iconfont{
+    font-size: 32px;
+}
+
+@media screen and (max-width: 500px) {
+    .real-time {
+        margin-top: 20px;
+    }
+}
+
+
+@keyframes beat {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: .8;
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
